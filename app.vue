@@ -8,7 +8,7 @@
       </h1>
 
       <div class="block 2xl:hidden text-sm text-brand-brown font-medium pt-4">
-        <span class="hidden md:block">
+        <span class="hidden md:block lg:hidden">
           * Navigate with 2 fingers
         </span>
         <span class="md:hidden">
