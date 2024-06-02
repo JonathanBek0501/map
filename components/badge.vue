@@ -1,5 +1,5 @@
 <template>
-    <div :class="`group absolute ${positionClass} cursor-pointer bg-brand-cream-dark rounded-2.5xl flex items-center hover:gap-3 justify-center max-w-fit w-full h-9 px-2`">
+    <div :class="`group absolute ${positionClass} cursor-pointer bg-brand-cream-dark rounded-2.5xl flex items-center hover:gap-3 justify-center max-w-fit w-full hover:z-10 h-9 px-2`">
         <div class="w-5 shrink-0">
             <img :src="`/icons/${img}`" alt="">
         </div>
