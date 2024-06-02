@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-base mx-auto pt-20">
-    <div class="max-w-7xl mx-auto px-12">
+  <div class="max-w-base mx-auto pt-12 lg:pt-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
       <h1 class="text-[27px] lg:text-3xl leading-9 2xl:text-4xl 2xl:leading-10 text-brand-brown font-Americana">
         Discover Ulaman
         <br>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="flex items-center justify-center">
-      <div class="relative w-full h-full overflow-x-auto hide-scrollbar">
+      <div ref="scrollableDiv" class="relative w-full h-full overflow-x-auto hide-scrollbar">
         <div class="w-[1440px] whitespace-nowrap">
           <img src="/Map.png" alt="map">
         </div>
@@ -41,14 +41,29 @@
     </div>
 
     <!-- sticky -->
-    <div class="sticky bottom-8 ml-32 w-fit bg-brand-brown rounded-3xl flex items-center gap-1.5 p-2.5 pr-3">
-      <span class="bg-brand-cream-dark rounded-full size-2"></span>
-      <span class="text-sm text-brand-cream-dark">
-        Tap on an icon
-      </span>
+    <div class="sticky bottom-8 max-w-7xl mx-auto px-6 md:px-12">
+      <div class="w-fit bg-brand-brown rounded-3xl flex items-center gap-1.5 p-2.5 pr-3">
+        <span class="bg-brand-cream-dark rounded-full size-2"></span>
+        <span class="text-sm text-brand-cream-dark">
+          Tap on an icon
+        </span>
+      </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const scrollableDiv = ref(null);
+
+onMounted(() => {
+  requestAnimationFrame(() => {
+    const div = scrollableDiv.value;
+    div.scrollLeft = (div.scrollWidth - div.clientWidth) / 2;
+  });
+});
+</script>
 
 <style>
 .hide-scrollbar::-webkit-scrollbar {
