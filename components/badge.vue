@@ -11,16 +11,16 @@
     </div>
 
     <div v-if="modalOpen" @click="toggleModal" class="fixed inset-0 flex items-center justify-center z-20">
-        <div @click.stop class="flex max-w-[720px]">
+        <div @click.stop class="flex max-w-sm sm:max-w-fit md:max-w-[720px] shadow-md mx-5">
             <div class="shrink-0">
-                <div class="max-w-xs w-full h-full bg-red-700">
-                    <img src="/modal-image.jpeg" alt="" class="w-full h-full object-cover">
+                <div class="hidden sm:block max-w-[240px] md:max-w-xs w-full h-full">
+                    <img src="/modal-image.jpeg" alt="img" class="w-full h-full object-cover">
                 </div>
             </div>
 
-            <div class="relative bg-brand-cream-dark py-14 pr-9 pl-12">
-                <button type="button" @click="toggleModal" class="absolute top-5 right-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <div class="relative bg-brand-cream-dark py-10 md:py-14 px-7 md:pr-9 md:pl-12">
+                <button type="button" @click="toggleModal" class="absolute top-4 right-4 text-brand-brown">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                 </button>
@@ -30,11 +30,11 @@
                         Accomodation
                     </span>
 
-                    <h2 class="text-2xl leading-[30px] font-Americana text-brand-brown pb-4">
+                    <h2 class="text-xl md:text-2xl md:leading-[30px] font-Americana text-brand-brown pb-4">
                         Cocoon Upper <br>Deluxe
                     </h2>
 
-                    <p class="text-sm pb-5">
+                    <p class="text-xs md:text-sm pb-5">
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
                     </p>
 
