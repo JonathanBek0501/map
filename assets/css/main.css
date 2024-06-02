@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-brand-cream font-ArabicPro
+    }
+}
+
+@font-face {
+    font-family: 'Americana';
+    src: url('../fonts/AmericanaRoman.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Arabic Pro';
+    src: url('../fonts/BasisGrotesqueArabicPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basis Grotesque Arabic Pro';
+    src: url('../fonts/BasisGrotesqueArabicPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
